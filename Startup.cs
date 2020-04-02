@@ -32,7 +32,7 @@ namespace minapi
             {
                 endpoints.MapGet("/", async context =>
                 {
-                    await context.Response.WriteAsync("Hello World!w");
+                    await context.Response.WriteAsync("Hello World!");
                 });
             });
         }
