@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  web:
+    ports:
+    - "8080:80"
+    build: .
+    image: "minapi:latest"
+    environment: 
+      TEST: "Hello World!"
