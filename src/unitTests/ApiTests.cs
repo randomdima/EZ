@@ -16,13 +16,16 @@ namespace unitTests
         }
 
         [Fact]
-        public async Task GetHelloWorld()
+        public async Task ApiRoot_GetRequest_ReturnsHelloWorld()
         {
+            // Arrange
             var client = _factory.CreateClient();
             var envVariableValue = Environment.GetEnvironmentVariable("TEST");
 
+            // Act
             var response = await client.GetAsync("/");
 
+            // Assert
             response.EnsureSuccessStatusCode();
             var responseText = await response.Content.ReadAsStringAsync();
             Assert.Equal(envVariableValue, responseText);
