@@ -9,9 +9,9 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/src/bin/Debug/netcoreapp3.1/minapi.dll",
+            "program": "${workspaceFolder}/src/minapi/bin/Debug/netcoreapp3.1/minapi.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/src",
+            "cwd": "${workspaceFolder}/src/minapi",
             "stopAtEntry": false,
             "serverReadyAction": {
                 "action": "openExternally",
