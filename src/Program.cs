@@ -20,6 +20,7 @@ namespace minapi
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
+                    var q = 2;
                     webBuilder.UseStartup<Startup>();
                 });
     }
