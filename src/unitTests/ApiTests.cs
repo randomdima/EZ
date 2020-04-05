@@ -19,7 +19,7 @@ namespace unitTests
         public async Task ApiRoot_GetRequest_ReturnsHelloWorld()
         {
             // Arrange
-            var client = _factory.CreateClient();
+            using var client = _factory.CreateClient();
             var envVariableValue = Environment.GetEnvironmentVariable("TEST");
 
             // Act
