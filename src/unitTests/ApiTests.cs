@@ -16,19 +16,6 @@ namespace unitTests
         }
 
         [Fact]
-        public void Successful()
-        {
-            Assert.True(true);
-        }
-
-        [Fact]
-        public void EnvironmentVariableValue()
-        {
-            var envVariableValue = Environment.GetEnvironmentVariable("TEST");
-            Assert.Equal("Hello World!", envVariableValue);
-        }
-
-        [Fact]
         public async Task GetHelloWorld()
         {
             var client = _factory.CreateClient();
