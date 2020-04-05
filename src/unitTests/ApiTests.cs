@@ -22,15 +22,23 @@ namespace unitTests
         }
 
         [Fact]
+        public void EnvironmentVariableValue()
+        {
+            var envVariableValue = Environment.GetEnvironmentVariable("TEST");
+            Assert.Equal("Hello World!", envVariableValue);
+        }
+
+        [Fact]
         public async Task GetHelloWorld()
         {
             var client = _factory.CreateClient();
+            var envVariableValue = Environment.GetEnvironmentVariable("TEST");
 
             var response = await client.GetAsync("/");
 
             response.EnsureSuccessStatusCode();
             var responseText = await response.Content.ReadAsStringAsync();
-            Assert.Equal("Hello World!", responseText);
+            Assert.Equal(envVariableValue, responseText);
         }
     }
 }
