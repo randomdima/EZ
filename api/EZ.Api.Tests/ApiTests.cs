@@ -3,13 +3,13 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Xunit;
 
-namespace unitTests
+namespace EZ.Api.Tests
 {
-    public class ApiTests: IClassFixture<WebApplicationFactory<minapi.Startup>>
+    public class ApiTests: IClassFixture<WebApplicationFactory<Startup>>
     {
-        private readonly WebApplicationFactory<minapi.Startup> _factory;
+        private readonly WebApplicationFactory<Startup> _factory;
 
-        public ApiTests(WebApplicationFactory<minapi.Startup> factory)
+        public ApiTests(WebApplicationFactory<Startup> factory)
         {
             _factory = factory;
             System.Environment.SetEnvironmentVariable("TEST", "Hello World!");

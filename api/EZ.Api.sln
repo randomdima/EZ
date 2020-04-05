@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "minapi", "minapi\minapi.csproj", "{0FF19913-BC48-4213-8801-6EB2BC93DFE0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EZ.Api", "EZ.Api\EZ.Api.csproj", "{0FF19913-BC48-4213-8801-6EB2BC93DFE0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "unitTests", "unitTests\unitTests.csproj", "{0387456C-D147-48BF-B6A1-9CA6B2131555}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EZ.Api.Tests", "EZ.Api.Tests\EZ.Api.Tests.csproj", "{0387456C-D147-48BF-B6A1-9CA6B2131555}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
