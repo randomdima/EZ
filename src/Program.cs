@@ -14,7 +14,7 @@ namespace minapi
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
-        }
+        }qweqwe
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
