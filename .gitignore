@@ -1,7 +1,5 @@
-
 ## ignore all files and directories
 .*
-*/.*
 
 ## exception
 !.gitignore
