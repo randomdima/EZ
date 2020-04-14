@@ -1,0 +1,43 @@
+li {
+    display: grid;
+    justify-self: center;
+    margin: auto;
+    width: 80%;
+    min-width: 800px;
+    grid-template-columns: 50px auto 50px;
+    padding: 1rem;
+    font-family: cursive;
+    font-size: 40px;
+}
+
+span {
+    padding: 5px;
+}
+
+button {
+    align-self: center;
+    outline: none;
+    line-height: 80%;
+    box-shadow: inset 0px 1px 3px 0px #0b3aba;
+    background: linear-gradient(to bottom, #9eb4db 5%, #1f4778 100%);
+    background-color: #9eb4db;
+    border-radius: 42px;
+    border: 1px solid #6c7db0;
+    margin-left: 15px;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 18px;
+    padding: 0.6rem 0.7rem;
+    left: 1px;
+}
+
+button:hover {
+    background: linear-gradient(to bottom, #1f4778 5%, #9eb4db 100%);
+    background-color: #1f4778;
+}
+
+button:active {
+    position: relative;
+    top: 1px;
+}
