@@ -1,13 +1,41 @@
-li {
+.todoItem {
+    display: flex;
+    flex-direction: column;
+}
+
+.todoTitle {
     display: grid;
     justify-self: center;
     margin: auto;
     width: 80%;
     min-width: 800px;
-    grid-template-columns: 50px auto 50px;
     padding: 1rem;
+    grid-template-columns: 50px auto 120px 50px;
     font-family: cursive;
     font-size: 40px;
+}
+
+.hidenProps {
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    height: auto;
+    max-height: 600px;
+    justify-self: center;
+    margin: auto;
+    padding-left: 10rem;
+    width: 80%;
+    min-width: 800px;
+    font-family: cursive;
+    font-size: 40px;
+}
+
+.hidenProps.collapsed {
+    max-height: 0;
+    transition: max-height 0.4s ease-out;
+}
+
+.todoProps {
+    padding: .5rem;
 }
 
 span {
@@ -40,4 +68,17 @@ button:hover {
 button:active {
     position: relative;
     top: 1px;
+}
+
+button.todoPropButton {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    box-shadow: none;
+    font-size: 18px;
+    color: rgb(141, 149, 151);
+    padding: 5%;
+    padding-bottom: 10%;
+    align-self: flex-end;
 }
