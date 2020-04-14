@@ -1,0 +1,20 @@
+    form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    input {
+        width: 50%;
+        min-width: 500px;
+        border: 2px solid #6c7db0;
+        border-radius: 10px;
+        font-size: 35px;
+        font-family: cursive;
+    }
+
+    input:focus {
+        border-color: #2188ff;
+        outline: none;
+        box-shadow: inset 0 .5px 1px rgba(27, 31, 35, .075), 0 0 0 0.05em rgba(3, 102, 214, .3);
+    }
