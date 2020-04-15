@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import PropTypes from 'prop-types'
 import './TodoItem.css'
+// import AddProp from '../../AddTodoProp/AddProp.js'
+const AddProp = React.lazy(() => import('../../AddTodoProp/AddProp.js'))
 
 function TodoItem({ todo, index, removeTodo }) {
     return (
@@ -20,19 +22,12 @@ function TodoItem({ todo, index, removeTodo }) {
                 <button onClick={() => removeTodo(todo.id)}>&times;</button>
             </div>
             <div className="hidenProps collapsed" id={todo.id}>
-
-                <div className="todoProps">
-                    User: {todo.user.login}
-                </div>
-                <div className="todoProps">
-                    Label: {todo.labels.map(q => q.name)}
-                </div>
-                <div className="todoProps">
-                    State: {todo.state}
-                </div>
-
+                <Suspense fallback={<div>Loading</div>}>
+                    <AddProp todoItem={todo} />
+                </Suspense>
             </div>
-        </div>
+
+        </div >
     )
 }
 
