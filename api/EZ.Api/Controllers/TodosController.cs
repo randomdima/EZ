@@ -9,7 +9,7 @@ namespace EZ.Api.Controllers
     [Route("/todos")]
     public class TodosController : ControllerBase
     {
-        private int _counter = 0;
+        private static int _counter = 0;
         private static ConcurrentDictionary<int, Todo> _todos = new ConcurrentDictionary<int, Todo>();
 
         [HttpGet]
