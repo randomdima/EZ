@@ -28,7 +28,7 @@ namespace EZ.Api.Controllers
         }
 
         [HttpDelete("/{id}")]
-        public IActionResult Delete(int id)
+        public IActionResult Delete([FromRoute] int id)
         {
             if (_todos.TryRemove(id,out var todo))
             {
