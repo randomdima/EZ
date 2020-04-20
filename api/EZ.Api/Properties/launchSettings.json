@@ -8,14 +8,6 @@
     }
   },
   "profiles": {
-    "IIS Express": {
-      "commandName": "IISExpress",
-      "launchBrowser": true,
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development",
-        "TEST": "Hello World!"
-      }
-    },
     "minapi": {
       "commandName": "Project",
       "launchBrowser": true,
