@@ -25,14 +25,14 @@ function App() {
       completed: false,
       title: 'if no github todos',
       url: 'https://api.github.com/repos/randomdima/ez/issues/22'
-    }]);
+    }
+  ]);
 
-  // useState(() => {
-  //   fetch('https://api.github.com/repos/randomdima/ez/issues?state=all')
-  //     .then(response => response.json())
-  //     .then(setTodos);
-  // })
-    console.log(todos)
+  useState(() => {
+    fetch('https://api.github.com/repos/randomdima/ez/issues')
+      .then(response => response.json())
+      .then(setTodos);
+  })
 
 
 
