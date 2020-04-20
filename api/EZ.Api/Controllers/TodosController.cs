@@ -21,7 +21,8 @@ namespace EZ.Api.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] Todo todo)
         {
-            todo.Id = Interlocked.Increment(ref _counter);
+            Interlocked.Increment(ref _counter);
+            todo.Id = _counter;
             _todos.TryAdd(todo.Id, todo);
             return Created($"/todos/{todo.Id}", todo);
         }
