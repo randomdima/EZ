@@ -7,7 +7,7 @@ class Button extends React.Component {
     render() {
         return (
             <button className='todoPropButton' {...this.props}>
-                 more details
+                more details
             </button>
         );
     }
@@ -26,7 +26,6 @@ class TodoItem extends React.Component {
     }
 
     handleClick() {
-        console.log(this.state.clicked)
         if (!this.state.clicked) {
             this.setState({
                 clicked: true
@@ -52,7 +51,7 @@ class TodoItem extends React.Component {
                     <Button onClick={this.handleClick} />
                     <button onClick={() => this.props.removeTodo(prop.todo.id)}>&times;</button>
                 </div>
-                <div>{this.state.clicked ? <React.Suspense fallback=''> <AddProp {...prop.todo} /></React.Suspense> : null}</div>
+                <div>{this.state.clicked ? <React.Suspense fallback='Loading...'> <AddProp {...prop.todo} /></React.Suspense> : null}</div>
             </div>
 
         );

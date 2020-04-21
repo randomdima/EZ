@@ -13,6 +13,14 @@ namespace EZ.Api
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllers();
+            services.AddCors(c =>
+            {
+                c.AddDefaultPolicy(q =>
+                    q.AllowAnyOrigin()
+                        .AllowAnyHeader()
+                        .AllowAnyMethod());
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -23,15 +31,9 @@ namespace EZ.Api
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCors();
             app.UseRouting();
-
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync(Environment.GetEnvironmentVariable("TEST"));
-                });
-            });
+            app.UseEndpoints(q => q.MapControllers());
         }
     }
 }
