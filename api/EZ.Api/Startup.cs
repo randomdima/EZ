@@ -14,6 +14,7 @@ namespace EZ.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -24,6 +25,7 @@ namespace EZ.Api
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCors();
             app.UseRouting();
             app.UseEndpoints(q => q.MapControllers());
         }
