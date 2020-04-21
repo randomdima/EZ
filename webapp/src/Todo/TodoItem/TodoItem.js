@@ -26,7 +26,6 @@ class TodoItem extends React.Component {
     }
 
     handleClick() {
-        console.log(this.state.clicked)
         if (!this.state.clicked) {
             this.setState({
                 clicked: true

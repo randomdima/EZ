@@ -2,24 +2,18 @@ import React from 'react'
 class AddProp extends React.Component {
     constructor(props) {
         super(props);
-        // console.log(props)
         this.state = {
-            data: [],
-            isLoading: false,
-            error: null
+            data: []
         }
     }
 
     componentDidMount() {
-        this.setState({ isLoading: true });
-        console.log(this.props.url);
         fetch(this.props.url)
             .then(response => response.json())
             .then(result => this.setState({
-                data: result,
-                isLoading: false
+                data: result
             }))
-            .catch(error => this.setState({ error, isLoading: false }));
+
     }
 
     render() {
@@ -27,7 +21,13 @@ class AddProp extends React.Component {
         if (data.length !== 0) {
             return (
                 <div className="hidenProps">
-                    {data.title}
+                    <ul style={{ listStyle: 'none' }}>
+                        <li>User: {data.user.login}</li>
+                        <li>Discription: {data.body ? <div>{data.body}</div> : <div>no discription</div>}</li>
+                        <li>State: {data.state}</li>
+                        <li>Labels: {data.labels.length ? <div>{data.labels[0].name}</div> : <div>no labels</div>}</li>
+                    </ul>
+
                 </div>
             )
         } else {
