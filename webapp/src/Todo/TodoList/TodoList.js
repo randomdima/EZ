@@ -1,18 +1,26 @@
 import React from 'react'
 import TodoItem from '../TodoItem/TodoItem'
 import PropTypes from 'prop-types'
-import './TodoList.css'
 
-function TodoList({todos,removeTodo}) {    
+function TodoList({ todos, removeTodo, filterText }) {
+    const todo = todos.filter(todo => filterText === "" ||
+        todo.title.toLowerCase().includes(filterText.toLowerCase()))
+        .map((todo, index) =>
+            <TodoItem
+                todo={todo}
+                key={todo.id}
+                index={index}
+                removeTodo={removeTodo} />)
     return (
         <ul>
-            {todos.map((todo, index) => <TodoItem todo={todo} key={todo.id} index={index} removeTodo={removeTodo} />)}
+            {todo}
         </ul>
     )
 }
 TodoList.propTypes = {
     todos: PropTypes.arrayOf(PropTypes.object).isRequired,
-    removeTodo: PropTypes.func.isRequired
+    removeTodo: PropTypes.func.isRequired,
+    filterText: PropTypes.string
 }
 
 export default TodoList

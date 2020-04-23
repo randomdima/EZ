@@ -1,13 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import './TodoItem.css'
+import { ReactComponent as CloseIcon } from './close.svg';
 const AddProp = React.lazy(() => import('../../AddTodoProp/AddProp.js'))
 
 class Button extends React.Component {
     render() {
         return (
             <button className='todoPropButton' {...this.props}>
-                 more details
+                more details
             </button>
         );
     }
@@ -49,7 +50,9 @@ class TodoItem extends React.Component {
                         {prop.todo.title}
                     </span>
                     <Button onClick={this.handleClick} />
-                    <button onClick={() => this.props.removeTodo(prop.todo.id)}>&times;</button>
+                    <button className='remove-button'
+                     onClick={() => this.props.removeTodo(prop.todo.id)}
+                    ><CloseIcon className='remove-button-icon'/></button>
                 </div>
                 <div>{this.state.clicked ? <React.Suspense fallback=''> <AddProp {...prop.todo} /></React.Suspense> : null}</div>
             </div>

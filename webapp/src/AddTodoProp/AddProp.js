@@ -23,9 +23,9 @@ class AddProp extends React.Component {
                 <div className="hidenProps">
                     <ul style={{ listStyle: 'none' }}>
                         <li>User: {data.user.login}</li>
-                        <li>Discription: {data.body ? <div>{data.body}</div> : <div>no discription</div>}</li>
+                        <li> {data.body ? <div>Discription: {data.body}</div> : <div>no discription</div>}</li>
                         <li>State: {data.state}</li>
-                        <li>Labels: {data.labels.length ? <div>{data.labels[0].name}</div> : <div>no labels</div>}</li>
+                        <li> {data.labels.length ? <div>Labels: {data.labels[0].name}</div> : <div>no labels</div>}</li>
                     </ul>
 
                 </div>
