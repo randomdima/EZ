@@ -1,10 +1,11 @@
 body {
-    display: flex;
-    justify-content: center;
+    background: #e0e1e4;
+    margin: 0;
 }
 
 .header {
-    margin: 4rem;
+    padding-top: 110px;
+    margin-bottom: 4rem;
     text-align: center;
     font-family: cursive;
     font-size: 68px;
@@ -15,4 +16,35 @@ p {
     text-align: center;
     font-family: cursive;
     font-size: 40px;
+}
+
+.navBar {
+    margin: 0;
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: 0px 4px 4px #9eb4db;
+    background: linear-gradient(to bottom, #9eb4db 1%, #1f4778 2%);
+    background-color: #9eb4db;
+}
+.centerBar{
+    display: grid;
+    justify-items: center;
+}
+
+.leftBar {
+    margin-left: 2rem;
+}
+
+ul {
+    margin: 1rem;
+    width: 80%;
+
+}
+
+li {
+    padding: 0.5rem;
 }

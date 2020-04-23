@@ -8,61 +8,51 @@
     display: grid;
     justify-self: center;
     margin: auto;
-     width: 80%;
+    width: 80%;
     min-width: 850px;
     padding: 1rem;
     grid-template-columns: 50px auto 120px 50px;
     font-family: cursive;
     font-size: 40px;
-}
-
-.hidenProps {
-    overflow: hidden;
-    transition: max-height 10s ease-out;
-    height: auto;
-    max-height: 600px;
-    justify-self: center;
-    margin: auto;
-    padding-left: 10rem;
-    width: 80%;
-    min-width: 800px;
-    font-family: cursive;
-    font-size: 40px;
+    box-shadow: 0px 2px 0px #a2abb315;
 }
 
 span {
     padding: 5px;
 }
 
-button {
+.remove-button-icon {
+    width: 10px;
+    height: 10px;
+    padding-top: 0.1rem;
+}
+
+.remove-button {
     align-self: center;
     outline: none;
-    line-height: 80%;
     box-shadow: inset 0px 1px 3px 0px #0b3aba;
     background: linear-gradient(to bottom, #9eb4db 5%, #1f4778 100%);
     background-color: #9eb4db;
-    border-radius: 42px;
+    border-radius: 100%;
     border: 1px solid #6c7db0;
     margin-left: 15px;
     cursor: pointer;
     color: #ffffff;
-    font-family: Arial;
-    font-size: 18px;
-    padding: 0.6rem 0.7rem;
+    padding: 0.6rem 0.6rem;
     left: 1px;
 }
 
-button:hover {
+.remove-button:hover {
     background: linear-gradient(to bottom, #1f4778 5%, #9eb4db 100%);
     background-color: #1f4778;
 }
 
-button:active {
+.remove-button:active {
     position: relative;
     top: 1px;
 }
 
-button.todoPropButton {
+.todoPropButton {
     margin: 0;
     padding: 0;
     border: none;
@@ -71,9 +61,11 @@ button.todoPropButton {
     font-size: 18px;
     color: rgb(141, 149, 151);
     padding: 5%;
+    font-family: cursive;
     padding-bottom: 10%;
     align-self: flex-end;
 }
+
 button.todoPropButton:hover {
     text-decoration: underline;
     color: #5d6ea0;

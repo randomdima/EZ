@@ -14,9 +14,12 @@ function AddTodo({ onCreate }) {
         }
     }
     return (
-        <form onSubmit={submitTodo}>
-            <input value={value} onChange={event => setValue(event.target.value)} placeholder={'New issue'} />
-            <button type="submit" >
+        <form onSubmit={submitTodo} className='form-add-todo'>
+            <input
+                value={value}
+                onChange={event => setValue(event.target.value)} placeholder={'New issue'}
+                className='input-add-todo-text' />
+            <button type="submit" className='buttom-add-todo'>
                 Add issue
             </button>
         </form>

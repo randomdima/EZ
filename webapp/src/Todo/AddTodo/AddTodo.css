@@ -1,21 +1,43 @@
-    form {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+.form-add-todo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    input {
-        width: 50%;
-        padding-left: 10px;
-        min-width: 500px;
-        border: 2px solid #6c7db0;
-        border-radius: 10px;
-        font-size: 35px;
-        font-family: cursive;
-    }
+.input-add-todo-text {
+    width: 50%;
+    padding-left: 10px;
+    min-width: 500px;
+    border: 2px solid #6c7db0;
+    border-radius: 10px;
+    font-size: 35px;
+    font-family: cursive;
+}
 
-    input:focus {
-        border-color: #2188ff;
-        outline: none;
-        box-shadow: inset 0 .5px 1px rgba(27, 31, 35, .075), 0 0 0 0.05em rgba(3, 102, 214, .3);
-    }
+input:focus::placeholder {
+    color: transparent;
+}
+
+.input-add-todo-text:focus {
+    border-color: #2188ff;
+    outline: none;
+    box-shadow: inset 0 .5px 1px rgba(27, 31, 35, .075), 0 0 0 0.05em rgba(3, 102, 214, .3);
+}
+
+.buttom-add-todo {
+    align-self: center;
+    outline: none;
+    box-shadow: inset 0px 1px 3px 0px #0b3aba;
+    background: linear-gradient(to bottom, #9eb4db 5%, #1f4778 100%);
+    background-color: #9eb4db;
+    border-radius: 50px;
+    border: 1px solid #6c7db0;
+    margin-left: 15px;
+    cursor: pointer;
+    color: #ffffff;
+    line-height: 35px;
+    left: 1px;
+    padding: 0.1rem 0.8rem 0.1rem 0.8rem;
+    font-family: cursive;
+    font-size: 20px;
+}
